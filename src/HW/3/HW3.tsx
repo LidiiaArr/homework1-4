@@ -22,7 +22,6 @@ export const HW3 = () => {
     const handleSave = () => {
         setTexts([...texts, currentText])
         setCurrentText('')
-
     };
 
     return (
@@ -33,7 +32,7 @@ export const HW3 = () => {
                 <h1 id={'hw03-default-text'}>Здесь появится новое дело</h1> // ничего не меняем, здесь все норм
             )}
 
-            <input id={'hw03-input'} type="text" value={currentText} onChange={handleChange}/>
+            <input id={'hw03-input'} type="text" value={currentText} onChange={(e)=> handleChange(e)}/>
 
             <button id={'hw03-button'} onClick={() => {handleSave()}}>
                 Сохранить
